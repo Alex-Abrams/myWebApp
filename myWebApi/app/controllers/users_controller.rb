@@ -4,18 +4,18 @@ class UsersController < ApplicationController
   end
 
   def show
-    @users = User.find(params[:id])
+    @user = User.find(params[:id])
   end
 
   def index
     @users = User.all
-    render :index
+    render json: @users
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:email)
+    params.require(:users).permit(:email)
   end
 
 end
