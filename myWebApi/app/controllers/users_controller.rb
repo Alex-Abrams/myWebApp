@@ -17,5 +17,5 @@ class UsersController < ApplicationController
   def user_params
     params.require(:users).permit(:email)
   end
-
+#dldl
 end
